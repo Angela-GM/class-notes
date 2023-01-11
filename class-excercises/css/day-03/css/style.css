@@ -1,0 +1,10 @@
+body  h1:only-of-type {
+    color: red;
+
+}
+
+body > p:first-of-type:hover {
+    color: red;
+
+}
+
