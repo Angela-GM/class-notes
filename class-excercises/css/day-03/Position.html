@@ -7,25 +7,47 @@
     <title>Position</title>
 
     <style>
+
+        body{
+            
+        }
+
         div h1 {
             position: fixed;
             top: 0;
             left: 0;
+            z-index: 1;
         }
 
         #container {
             width: 650px;
             height: 650px;
-            position: absolute;
+            position: relative;
             left: 150px;
             top: 150px;
         }
 
-       #img {
-            position: relative;
+       #img1 {
+            position: absolute;
+        }
+
+        #img2 {
+            position: absolute;
             top: 0;
+            right: 0;
+        }
+        #img3 {
+            position: absolute;
+            bottom: 0;
             left: 0;
         }
+        #img4 {
+            position: absolute;
+            bottom: 0;
+            right: 0;
+        }
+
+        
     </style>
 </head>
 <body>
@@ -33,10 +55,10 @@
         <h1>Position</h1>
     </div>
     <div id="container">
-        <img src="https://picsum.photos/300/300?random=1" alt="imagen 1">
-        <img src="https://picsum.photos/300/300?random=2" alt="imagen 2">
-        <img src="https://picsum.photos/300/300?random=3" alt="imagen 3">
-        <img src="https://picsum.photos/300/300?random=4" alt="imagen 4">
+        <img id="img1" src="https://picsum.photos/300/300?random=1" alt="imagen 1">
+        <img id="img2" src="https://picsum.photos/300/300?random=2" alt="imagen 2">
+        <img id="img3" src="https://picsum.photos/300/300?random=3" alt="imagen 3">
+        <img id="img4" src="https://picsum.photos/300/300?random=4" alt="imagen 4">
     </div>
     
 </body>
