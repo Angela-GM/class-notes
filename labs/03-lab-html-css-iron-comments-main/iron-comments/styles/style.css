@@ -1,0 +1,40 @@
+body {
+    padding: 0;
+    margin: 0;
+    padding-top: 100px;
+    width: 100vw;   
+    box-sizing: border-box;
+    background-color: rgb(25, 33, 41);
+    color: rgb(255,255,255);
+
+    
+
+}
+
+#form-container {
+    margin: auto;
+    width: 250px;
+    border: solid 2px rgb(67, 163, 230);
+    padding: 25px 25px;    
+}
+
+input, textarea {
+    border: solid 1px rgb(67, 163, 230);
+    margin: 5px 0;
+
+}
+
+#button {
+    background-color: rgb(67, 163, 230);
+    color: rgb(255,255,255);
+    border-radius: 12px;
+    padding: 7px 5px;
+    margin-top: 4px;
+}
+
+#cursiva {
+    font-style: italic;
+}
+
+
+
