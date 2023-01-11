@@ -6,6 +6,7 @@ body {
     box-sizing: border-box;
     background-color: rgb(25, 33, 41);
     color: rgb(255,255,255);
+    font-size: 600;
 
     
 
@@ -30,6 +31,7 @@ input, textarea {
     border-radius: 12px;
     padding: 7px 5px;
     margin-top: 4px;
+    font-weight: lighter;
 }
 
 #cursiva {
