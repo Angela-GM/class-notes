@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;400;700&display=swap');
+        
+        *{
+            font-family: "Poppins", sans-serif;
+        }
+
+        form {
+            background-color:aqua ;
+        }
+        .sizeFont {
+            font-size: 20px;
+        }
+        #margen {
+            margin: 24px;
+        }
+    </style>
+</head>
+<body>
+<h1>Formulario de Bandas</h1>
+<h2>Bandas favoritas</h2>
+    <form id="formBandas">
+        <label for="name">Nombre:</label> <input class="sizeFont" type="text" name="name" id="name"><br>
+        <label for="age">Edad:</label><input id="margen" type="number" min="0" max="18" ><br>
+        <label for="favGroup">Los 5 grupos favoritos:</label><br>
+        <textarea name="favGroup" id="favGroup" cols="30" rows="10" placeholder="Escribe tus 5 grupos favoritos"></textarea><br>
+        <label for="genero">Genero:</label>
+        <select name="genero" id="genero">
+            <option value="hiphop">HipHop</option>
+            <option value="rock">Rock</option>
+            <option value="HeavyMetal">Heavy Metal</option>
+        </select><br>
+        <input type="submit" onclick="alert('form submitted')" >     
+    </form>
+
+    
+</body>
+</html>
