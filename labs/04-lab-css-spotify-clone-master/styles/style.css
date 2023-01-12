@@ -1,0 +1,54 @@
+/*
+Colors:
+
+Text: 1A1A1A
+Green: #00B172
+White: #FFF
+
+*/
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    color: #1A1A1A;
+    font-size: 16px;
+    font-family: "Opens Sans", sans-serif;
+}
+
+header {
+    background-image: url(/images/landing.jpg);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    height: 100vh;
+}
+
+/* Nav */
+#music nav {
+    background-color: #FFF;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 0;
+
+}
+/* Icon */
+#music nav img {
+    height: 50px
+}
+
+#music nav ul {
+    display: flex;
+    justify-content: flex-end;
+    margin-right: 1rem;
+    gap: 1rem;
+    list-style: none;
+    color
+
+}
+
+
+
