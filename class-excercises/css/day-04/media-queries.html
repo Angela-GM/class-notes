@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Media Queries</title>
+    <!-- Style CSS -->
+    <style>
+      h1:nth-child(1) {
+        display: block;
+      }
+
+      h1:nth-child(2) {
+        display: none;
+      }
+
+      h1:nth-child(3) {
+        display: none;
+      }
+
+      /* Meida Queries */
+
+      /* Tablet */
+
+      @media all and (min-width: 480px) and (max-width: 768px) {
+        h1:nth-child(1) {
+          display: none;
+        }
+
+        h1:nth-child(2) {
+          display: block;
+        }
+      }
+
+      /* Tablet landscape */
+      @media all and (min-width: 769px) and (max-width: 1024px) {
+        h1:nth-child(1) {
+        display: none;
+      }
+
+
+      h1:nth-child(3) {
+        display: block;
+      }
+
+
+      }
+
+
+
+    </style>
+  </head>
+  <body>
+    <h1>Apocalyptica</h1>
+    <h1>2 Chelos</h1>
+    <h1>Blind Guardian</h1>
+  </body>
+</html>
