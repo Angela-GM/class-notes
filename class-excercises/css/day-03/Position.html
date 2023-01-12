@@ -1,65 +1,80 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Position</title>
 
     <style>
+      body {
+        margin: 0;
+        padding: 0;
+      }
 
-        body{
-            
-        }
+      h1 {
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: 1;
+        text-align: center;
+      }
 
-        div h1 {
-            position: fixed;
-            top: 0;
-            left: 0;
-            z-index: 1;
-        }
+      #container {
+        width: 650px;
+        height: 650px;
+        position: relative;
+        left: 150px;
+        top: 150px;
+        background-color: coral;
+      }
 
-        #container {
-            width: 650px;
-            height: 650px;
-            position: relative;
-            left: 150px;
-            top: 150px;
-        }
+      img {
+        position:absolute;
+        height: 30%;
+      }
 
-       #img1 {
-            position: absolute;
-        }
+     
 
-        #img2 {
-            position: absolute;
-            top: 0;
-            right: 0;
-        }
-        #img3 {
-            position: absolute;
-            bottom: 0;
-            left: 0;
-        }
-        #img4 {
-            position: absolute;
-            bottom: 0;
-            right: 0;
-        }
-
-        
+      #img2 {
+        top: 0;
+        right: 0;
+      }
+      #img3 {
+        bottom: 0;
+        left: 0;
+      }
+      #img4 {
+        bottom: 0;
+        right: 0;
+      }
     </style>
-</head>
-<body>
+  </head>
+  <body>
     <div>
-        <h1>Position</h1>
+      <h1>Position</h1>
     </div>
     <div id="container">
-        <img id="img1" src="https://picsum.photos/300/300?random=1" alt="imagen 1">
-        <img id="img2" src="https://picsum.photos/300/300?random=2" alt="imagen 2">
-        <img id="img3" src="https://picsum.photos/300/300?random=3" alt="imagen 3">
-        <img id="img4" src="https://picsum.photos/300/300?random=4" alt="imagen 4">
+      <img
+        id="img1"
+        src="https://picsum.photos/300/300?random=1"
+        alt="imagen 1"
+      />
+      <img
+        id="img2"
+        src="https://picsum.photos/300/300?random=2"
+        alt="imagen 2"
+      />
+      <img
+        id="img3"
+        src="https://picsum.photos/300/300?random=3"
+        alt="imagen 3"
+      />
+      <img
+        id="img4"
+        src="https://picsum.photos/300/300?random=4"
+        alt="imagen 4"
+      />
     </div>
-    
-</body>
+  </body>
 </html>
