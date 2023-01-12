@@ -1,3 +1,6 @@
+/* Google Font import */
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400&display=swap');
+
 * {
   padding: 0;
   margin: 0;
@@ -5,9 +8,9 @@
 }
 
 body {
-  font-family: Arial, Helvetica, sans-serif;
-  font-size: 18px;
-  line-height: 24px;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 16px;
+  /* line-height: 24px; */
 
 }
 
@@ -15,7 +18,7 @@ header {
   background-image: url(/apple-pie/images/apple-pie.jpg);
   height: 500px;
   background-repeat: no-repeat;
-  background-position: center;
+  background-position: center center;
   background-size: cover;
   z-index: -1;
   display: flex;
@@ -26,25 +29,40 @@ header {
 
 h1 {
   color: white;
-  font-weight: bold;
-  font-size: 50px;  
+  font-weight: 400;
+  font-size: 3rem;  
 }
 
 h2 {
+  font-size: 2rem;
+  font-weight: 300;
   margin: 25px 0;
 }
 
 img {
   display: block;
   margin: 0 auto;
+  width: 50%;
 }
+
+/* Main section styling */
 
 main {
-  width: 65%;
+  /* width: 70%; */
   margin: auto;
+  padding: 4rem;
 }
 
-ol {
+#ingredients ul {
+  list-style-type: "-";
+  margin: 0 0 1rem 1rem;
+}
+
+#ingrecients h2 {
+  margin: 0 0 14rem 0;
+}
+
+/* ol {
   list-style: none;
 }
 
@@ -54,6 +72,17 @@ ol > li::before {
 
 ol > li::before {
   content: counter(listcounter) ")";
+} */
+
+
+#directions ol {
+  list-style-type:none;
+  counter-reset: section;
+}
+
+#directions ol li::before {
+  content: ""counter(section)") ";
+  counter-increment: section;
 }
 
 hr {
@@ -62,6 +91,10 @@ hr {
 
 section {
   margin: 25px 0;
+}
+
+#recipe-information p {
+  font-size: 1.5rem;
 }
 
 ul {
