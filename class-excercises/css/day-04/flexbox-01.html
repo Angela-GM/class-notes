@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>FlexBox 1</title>
+    <style>
+        #padre {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-end;
+        }
+
+        #hijo {
+            display: flex;
+            justify-content: space-between;
+            gap: 5rem;
+
+        }
+
+
+    </style>
+  </head>
+  <body>
+    <!-- Creamos un div. Este debe contener 4 imágenes y otro div. El div anidado debe contener, a su vez, tres <p> con nombres propios vuestros, de vuestra familia, amigos... lo que queráis. Primero vamos a ordenar el div padre para que todo su contenido se ordene como una columna alineada a la derecha. A su vez, el <p> anidado debe ordenar los p como una fila y poner espacio entre cada uno de los <p>. -->
+
+    <div id="padre">
+      <img src="https://picsum.photos/300/300?random=1" alt="img1" />
+      <img src="https://picsum.photos/300/300?random=2" alt="img2" />
+      <img src="https://picsum.photos/300/300?random=3" alt="img3" />
+      <img src="https://picsum.photos/300/300?random=4" alt="img4" />
+      <div id="hijo">
+        <p>Angela</p>
+        <p>Carlos</p>
+        <p>Einar</p>
+      </div>
+    </div>
+  </body>
+</html>

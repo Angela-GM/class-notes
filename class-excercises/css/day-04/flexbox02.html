@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flexbox 2</title>
+
+    <!-- Style CSS -->
+    <style>
+        div {
+            display: flex;
+            flex-direction: column;
+            border: solid 1px black;
+        }
+
+        #section1 {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        #section2 {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Flexbox 2
+En un archivo html creamos un <section> tag que contenga cuatro <div> dentro. Cada uno de  los div debería tener una estructura como esta:
+<div>
+   <h3>Title</h3>
+   <h4>Subtitle</h4>
+   <p>Lorem ipsum dolor sit amet.</p> 
+</div>
+Duplicamos la section, de tal manera que tengamos dos veces la misma estructura. Primero tenemos que asegurarnos que cada uno de los divs ordena el h3, el h4 i el p en columna. Después, a la primera section vamos a ordenarla como una columna que esté centrada en medio del documento. A la otra section la vamos a ordenar en fila para que los divs queden uno al lado del otro. Lo que tendremos que cuidar aquí es que cuando reescalemos el viewport, los divs se pongan abajo de la fila adaptándose al tamaño de la pantalla para que no se vean cortados.
+ -->
+
+ <section id="section1">
+    <div>
+        <h3>Title</h3>
+        <h4>Subtitle</h4>
+        <p>Lorem ipsum dolor sit amet.</p> 
+     </div>
+     <div>
+        <h3>Title</h3>
+        <h4>Subtitle</h4>
+        <p>Lorem ipsum dolor sit amet.</p> 
+     </div>
+     <div>
+        <h3>Title</h3>
+        <h4>Subtitle</h4>
+        <p>Lorem ipsum dolor sit amet.</p> 
+     </div>
+     <div>
+        <h3>Title</h3>
+        <h4>Subtitle</h4>
+        <p>Lorem ipsum dolor sit amet.</p> 
+     </div>
+ </section>
+
+ <section id="section2">
+    <div>
+        <h3>Title</h3>
+        <h4>Subtitle</h4>
+        <p>Lorem ipsum dolor sit amet.</p> 
+     </div>
+     <div>
+        <h3>Title</h3>
+        <h4>Subtitle</h4>
+        <p>Lorem ipsum dolor sit amet.</p> 
+     </div>
+     <div>
+        <h3>Title</h3>
+        <h4>Subtitle</h4>
+        <p>Lorem ipsum dolor sit amet.</p> 
+     </div>
+     <div>
+        <h3>Title</h3>
+        <h4>Subtitle</h4>
+        <p>Lorem ipsum dolor sit amet.</p> 
+     </div>
+ </section>
+    
+</body>
+</html>
