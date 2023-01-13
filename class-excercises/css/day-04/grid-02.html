@@ -1,64 +1,52 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>GRID 2</title>
     <!-- Style CSS -->
     <style>
-        body {
-            margin: 0;
-        }
-        section {
-            height: 100vh;
-            display: grid;
-            grid-template-rows: 1fr 1fr 6fr;
-            grid-template-columns: 1fr 7fr;
-            grid-template-areas: 
-            "header header header"
-            "navbar navbar navbar"
-            "sidebar main main";
+      body {
+        margin: 0;
+      }
+      section {
+        height: 100vh;
+        display: grid;
+        grid-template-rows: auto auto 1fr;
+        grid-template-columns: auto 1fr;
+        grid-template-areas:
+          "header header header"
+          "navbar navbar navbar"
+          "sidebar main main";
+      }
 
-           
-
-        }
-
-        #header {
-            background-color: pink;
-            grid-area: header;
-        }
-        #navbar {
-            background-color: green;
-            grid-area: navbar;
-        }
-        #sidebar {
-            background-color: brown;
-            grid-area: sidebar;
-        }
-        #main {
-            background-color: yellow;
-            grid-area: main;
-        }
-
-
+      #header {
+        background-color: pink;
+        grid-area: header;
+      }
+      #navbar {
+        background-color: green;
+        grid-area: navbar;
+      }
+      #sidebar {
+        background-color: brown;
+        grid-area: sidebar;
+      }
+      #main {
+        background-color: yellow;
+        grid-area: main;
+      }
     </style>
-
-    
-</head>
-<body>
-    <!-- Creamos una section que contenga 4 divs. El primer div contendrá el texto "Header", el segundo "Navbar", el tercero "Sidebar" y el cuarto "Main". Convertid la section en un grid que mida 100vh y que reparta todos los divs de la manera que veis en la imagen. Recordad trabajar con las propiedades de grid-template-rows y grid-template-columns para organizar los divs en si. --> 
+  </head>
+  <body>
+    <!-- Creamos una section que contenga 4 divs. El primer div contendrá el texto "Header", el segundo "Navbar", el tercero "Sidebar" y el cuarto "Main". Convertid la section en un grid que mida 100vh y que reparta todos los divs de la manera que veis en la imagen. Recordad trabajar con las propiedades de grid-template-rows y grid-template-columns para organizar los divs en si. -->
 
     <section>
-        <div id="header">Header</div>
-        <div id="navbar">Navbar</div>
-        <div id="sidebar">Sidebar</div>
-        <div id="main">Main</div>
+      <div id="header">Header</div>
+      <div id="navbar">Navbar</div>
+      <div id="sidebar">Sidebar</div>
+      <div id="main">Main</div>
     </section>
-
-
-    
-
-    
-</body>
+  </body>
 </html>

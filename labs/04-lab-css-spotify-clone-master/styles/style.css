@@ -6,49 +6,181 @@ Green: #00B172
 White: #FFF
 
 */
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap');
 * {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
+    /* outline: 1px solid #e38d1c; */
 }
 
 body {
     color: #1A1A1A;
     font-size: 16px;
-    font-family: "Opens Sans", sans-serif;
+    font-family: 'Roboto', sans-serif;
+    background: #fafafa;
+   
+
+
+
 }
 
-header {
+h1 {
+    font-size: 4rem;
+    font-weight: 700;
+    margin: 20px 0;
+}
+
+h2 {
+    text-decoration: underline #00B172;
+
+}
+
+h3 {
+    color: #00B172;
+    padding-bottom: 1rem;
+}
+
+#music {
     background-image: url(/images/landing.jpg);
     background-repeat: no-repeat;
     background-position: center center;
     background-size: cover;
     height: 100vh;
+    width: 100%;
+    object-fit: cover;
 }
 
 /* Nav */
-#music nav {
+header nav {
     background-color: #FFF;
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 15px 0;
+    width: 100%;
 
 }
+/* header */
+header {
+    position: fixed;
+    top: 0;
+    z-index: 2;
+    width: 100%;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
 /* Icon */
-#music nav img {
-    height: 50px
+header nav img {
+    height: 50px;
+    margin-left: 1rem;
+    
 }
 
-#music nav ul {
+header nav ul {
     display: flex;
     justify-content: flex-end;
     margin-right: 1rem;
     gap: 1rem;
     list-style: none;
-    color
+}
+
+#music>div>p {
+    font-size: 1.2rem;
+    font-weight: 300;
+    text-align: center;
+    margin: 0 15%;
+
+}
+
+#music {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#music div {
+    display: flex;
+    flex-direction: column;
+    justify-content:center;
+    align-items: center;
+    color:#FFF
+}
+
+/* Section 2 */
+#whats-on-spotify {
+    display: flex;
+    flex-direction: column;
+    justify-content:center;
+    align-items: center; 
+    padding: 2rem 0;   
+}
+
+#whats-on-spotify>div {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#whats-on-spotify>div>div {
+    text-align: center;
 
 }
 
 
+#whats-on-spotify>div>div>img {
+    width: 80px;
+    margin-bottom: 1rem;
+}
 
+.item {
+    margin: 30px;
+    padding: 10px;
+    width: 200px;
+}
+
+.item p {
+    font-weight: 300;
+}
+
+/* Footer */
+#footer {
+    background-color: #00B172 ;
+    background-image: url(/images/spotify-icon-white.png);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: 100px;
+    margin: 0 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: #FFF;
+    padding: 80px;
+}
+
+#footer>div>h2 {
+    text-decoration-color: #FFF;
+}
+
+#img-app img{
+    width: 250px;
+}
+
+.item2 {
+    width: 250px;
+}
+
+.item2>h3 {
+    color: #FFF;
+    font-weight: 900;
+    padding: 1.4rem 0;
+
+}
+
+.item2>p {
+    font-weight: 300;
+}
