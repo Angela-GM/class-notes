@@ -1,0 +1,49 @@
+<!-- 0% width y height100px
+posicion superior izquierdo
+
+25 y 75%
+width height200px y otro color 
+
+
+50 y 100 reducir en 20px width y height
+
+animacion infinita-->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Animation CSS</title>
+    <style>
+      .box {
+        width: 100px;
+        height: 100px;
+        background-color: blue;
+        animation-name: wutan;
+        animation-duration: 2s;
+        animation-iteration-count: infinite;
+      }
+
+      @keyframes wutan {
+        0% {
+          top: 0;
+        }
+        25%, 75% {
+          width: 200px;
+          height: 200px;
+          background-color: yellow;
+        }
+        50%, 100% {
+          width: 180px;
+          height: 180px;
+        }
+
+      }
+    </style>
+  </head>
+  <body>
+    <div class="box"></div>
+  </body>
+</html>
