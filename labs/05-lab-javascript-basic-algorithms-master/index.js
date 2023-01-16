@@ -6,7 +6,6 @@ console.log(`The driver's name is ${hacker1}`);
 let hacker2 = "Einar";
 console.log(`The navigator's name is ${hacker2}`);
 
-
 // Iteration 2: Conditionals
 
 if (hacker1.length > hacker2.length) {
@@ -20,7 +19,6 @@ if (hacker1.length > hacker2.length) {
 } else {
   console.log(`Wow, you both have equally long names, XX characters!`);
 }
-
 
 // Iteration 3: Loops
 
@@ -37,6 +35,14 @@ for (let i = 0; i < upperCase.length; i++) {
 
 console.log(nameSpace);
 
+// In reverse order
+let reversed = "";
+
+for (let i = hacker1.length - 1; i >= 0; i--) {
+  reversed += hacker1[i];
+}
+
+console.log(reversed);
 
 // Bonus 1
 
@@ -51,16 +57,42 @@ let countWords = 0;
 let countEt = 0;
 
 for (let i = 0; i < words.length; i++) {
-    countWords ++;
-    if (words[i].includes("et")){
-        countEt++;
-        }    
+  countWords++;
+  if (words[i].includes("et")) {
+    countEt++;
+  }
 }
 
-console.log(`El texto contiene un total de ${countWords} palabras y ${countEt} veces la palabra et`);
-
-
+console.log(
+  `El texto contiene un total de ${countWords} palabras y ${countEt} veces la palabra et`
+);
 
 // Bonus 2
-let phraseToCheck = "Esto es un texto corto.";
+let phraseToCheck = "race car";
 
+console.log(phraseToCheck.length);
+
+let middle = phraseToCheck.length / 2;
+let inicio;
+let final = "";
+
+for (let i = 0; i < phraseToCheck.length / 2; i++) {
+  inicio = phraseToCheck[i];
+}
+
+//reverse
+
+for (let a = phraseToCheck.length / 2 - 1; a >= 0; a--) {
+  final += phraseToCheck[a];
+}
+
+console.log(final); // "reward"
+
+//Última comprobación una vez divida la frase
+if (inicio === final) {
+  console.log(`La frase ${phraseToCheck} SI es un palindromo`);
+} else {
+  console.log(`La frase ${phraseToCheck} NO es un palindromo`);
+}
+
+//No está bien este último ejercicio
