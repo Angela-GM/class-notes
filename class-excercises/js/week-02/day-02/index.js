@@ -18,15 +18,24 @@ let miFuncion = livesIn.livesInCity
 
 miFuncion();
 
-// const bioCheck = (firstName, age, livesIn) => {
-//   return `${firstName} tiene ${age} años y vive en ${
-//     livesIn.livesInCity ? "la ciudad" : "el pueblo"
-//   }`;
-// };
+// JS Arrays Methods
 
-const personalInfo2 = (user, age, livesIn) => {
-  let location = livesIn.livesInCity ? "a ciudad" : " pueblo";
-  return `${user} tiene ${age} años y vive en un${location}.`;
-};
+// 1. map() pasa por cada uno de los elementos de un array
+// 2. filter() filtra elementos de un array
+// 3. sort() Este metodo se utiliza par aordenar los elementos el array en orden ascendent o descendente >>>> mirar por internet como funciona
+// 4. forEach() ayuda a realizar un bucle sobre un array ejecuentado una funcion de devolucion de llamada para cada elemento de un array.
+// 5. concat() Se utilizar para fusionar dos o mas arrays y devuelve una nueva array sin cambiar las arrays existentes.
+// 6. every() comprueba cada elemento de la matriz que pasa la condicion, devolviendo true o false según corresponda.
 
-personalInfo2("Laia", 34, true);
+// let nombreDeVariable = array.every((number) => {
+//   return number > 5;
+// }); //comprueba si todos los elementos de un array son mayor que 5, si es cierto retorna el valor true, si no false
+
+// 7. some() comprueba si al menos un elemento de la matriz que pasa la condicion, devolviendo true o false
+// 8. includes() comprueba si un array incluye el elemento que pasa la condicion
+// 9. join() devuelve un nuevo string concatenado todos los elementos del array separados por el separador especificado
+//10 .push() añadir uno o mas elementos al final de un array
+//11. pop() elimina el último elemento de un array y devuelve ese elemento
+//12. shift() elimina uno elemento al incio de un array
+//13. unshift() añade uno o mas elmentos al inicio de un array
+//14. slice() devuelve un nuevo array con los elmentos especificados de inicio a fin
