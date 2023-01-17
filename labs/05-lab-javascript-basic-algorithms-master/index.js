@@ -17,8 +17,40 @@ if (hacker1.length > hacker2.length) {
     `It seems that the navigator has the longest name, it has ${hacker2.length} characters.`
   );
 } else {
-  console.log(`Wow, you both have equally long names, XX characters!`);
+  console.log(
+    `Wow, you both have equally long names, ${hacker1.length} characters!`
+  );
 }
+
+// Variación 002 vista en clase (ternary), se usa para substituir if...else
+// Syntax:
+// condition ? expression1 : expression2
+
+//si la condición es verdadera se ejecuta la expression1
+//si la condición es falsa se ejecuta la expression2
+
+//First Example - 50/50 conditonial- Ternary
+hacker1.length > hacker2.length
+  ? console.log(
+      `The driver has the longest name, it has ${hacker1.length} characters.`
+    )
+  : console.log(
+      `It seems that the navigator has the longest name, it has ${hacker2.length} characters.`
+    );
+
+//Multiple Use Cases - Ternary
+
+hacker1.length > hacker2.length
+  ? console.log(
+      `The driver has the longest name, it has ${hacker1.length} characters.`
+    )
+  : hacker1.length === hacker2.length
+  ? console.log(
+      `Wow, you both have equally long names, ${hacker1.length} characters!`
+    )
+  : console.log(
+      `It seems that the navigator has the longest name, it has ${hacker2.length} characters.`
+    );
 
 // Iteration 3: Loops
 
