@@ -8,6 +8,30 @@ function maxOfTwoNumbers(num1, num2) {
 }
 console.log(`The bigger number is ${maxOfTwoNumbers(10, 6)}`);
 
+// New Declaration
+const maxOfTwoNumbers2 = (num1, num2) => {
+  //v001
+  if (num1 === num2) {
+    console.log(`${num1} & ${num2} area the same number`);
+  } else if (num1 > num2) {
+    console.log(`In this case ${num1} is bigger than ${num2}`);
+  } else {
+    console.log(`In this case ${num2} is bigger than ${num1}`);
+  }
+};
+
+console.log(`Iteration 001 - V001`);
+maxOfTwoNumbers2(40, 30);
+
+// // V002 Teranry
+// const maxOfTwoNumbers3 = (num1, num2) => {
+//   (num1 > num2)`In this case ${num1} is bigger than ${num2}`
+//     ? num1 === num2`${num1} & ${num2} area the same number`
+//     : num1 < num2`In this case ${num1} is bigger than ${num2}`;
+// };
+
+// maxOfTwoNumbers3(60, 100);
+
 // Iteration #2: Find longest word
 const words = [
   "mystery",
@@ -19,29 +43,42 @@ const words = [
   "crackpot",
 ];
 
-function findLongestWord(words) {
-  let longestWord = [];
+// function findLongestWord(words) {
+//   let longestWord = [];
+//   for (let i = 0; i < words.length; i++) {
+//     if (words[i].length > longestWord.length) {
+//       longestWord = words[i];
+//     }
+//   }
+
+//   return longestWord;
+// }
+
+const findLongestWord = (words) => {
+  // Stop logic if array is empty
+  if (words.length === 0) return null;
+  // Use this empty string variable to store longest word
+  let longestWord = "";
   for (let i = 0; i < words.length; i++) {
-    if (words[i].length > longestWord.length) {
-      longestWord = words[i];
-    }
+    if (words[i].length > longestWord.length) longestWord = words[i];
   }
 
   return longestWord;
-}
+};
 
 console.log(`The longest word is: ${findLongestWord(words)}`);
 
 // Iteration #3: Calculate the sum
 const numbers = [6, 12, 1, 18, 13, 16, 2, 1, 8, 10];
 
-function sumNumbers(numbers) {
+const sumNumbers = (numbersArray) => {
   let result = 0;
-  for (let i = 0; i < numbers.length; i++) {
-    result += numbers[i];
+  for (let i = 0; i < numbersArray.length; i++) {
+    result += numbersArray[i];
   }
   return result;
-}
+};
+
 console.log(
   `The sum of all of the numbers in the array is ${sumNumbers(numbers)}`
 );
@@ -54,8 +91,8 @@ function sum(mixedArr) {
   for (let i = 0; i <= mixedArr.length; i++) {
     if (typeof mixedArr[i] === "string") {
       count += mixedArr[i].length;
-    } else if (typeof mixedArr[i] === true) {
-      count + 1;
+    } else if (mixedArr[i] === true) {
+      count++;
     } else if (typeof mixedArr[i] === "number") {
       count += mixedArr[i];
     }
@@ -65,17 +102,46 @@ function sum(mixedArr) {
 
 console.log(`The sum of all of the elements in the array is ${sum(mixedArr)}`);
 
+// Como se ha hecho en clase
+
+const sum2 = (mixedArray) => {
+  let totalSumOfMixedArrayPositions = 0;
+  for (let i = 0; i < mixedArray.length; i++) {
+    // strings
+    if (typeof mixedArray[i] === "string") {
+      totalSumOfMixedArrayPositions += mixedArray[i].length;
+    }
+    // booleanos
+    else if (mixedArray[i] === true) {
+      totalSumOfMixedArrayPositions++;
+    }
+    // resto de numeros
+    else {
+      totalSumOfMixedArrayPositions += mixedArray[i];
+    }
+  }
+  return totalSumOfMixedArrayPositions;
+};
+
+console.log(`The sum of all of the elements in the array is ${sum2(mixedArr)}`);
+
 // Iteration #4: Calculate the average
 // Level 1: Array of numbers
 const numbersAvg = [2, 6, 9, 10, 7, 4, 1, 9];
 
-function averageNumbers(numbersAvg) {
-  let result2 = 0;
-  for (let i = 0; i < numbersAvg.length; i++) {
-    result2 += numbersAvg[i];
-  }
-  return result2 / numbersAvg.length;
-}
+// const averageNumbers = (numbers) => {
+//   let result2 = 0;
+//   for (let i = 0; i < numbers.length; i++) {
+//     result2 += numbers[i];
+//   }
+//   return result2 / numbers.length;
+// };
+
+// Reutilizar funcion sumNumbers que suma los numeros de un array
+const averageNumbers = (numbers) => {
+  return (sumNumbers(numbers) / numbers.length).toFixed(2);
+};
+
 console.log(`The average of the numbers is ${averageNumbers(numbersAvg)}`);
 
 // Level 2: Array of strings
@@ -101,6 +167,12 @@ function averageWordLength(wordsArr) {
 }
 
 console.log(`The average length of the words: ${averageWordLength(wordsArr)}`);
+
+const averageWordLength2 = (wordsArr) => {
+  return wordsArr.join("").length / wordsArr.length;
+};
+
+console.log(`The average length of the words: ${averageWordLength2(wordsArr)}`);
 
 // Bonus - Iteration #4.1
 function avg() {}
