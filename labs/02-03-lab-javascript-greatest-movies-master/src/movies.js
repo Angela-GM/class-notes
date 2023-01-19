@@ -59,41 +59,108 @@ console.table(dramaMoviesScore(movies));
 
 // Iteration 5: Ordering by year - Order by year, ascending (in growing order)
 const orderByYear = (movies) => {
-  //Crear un shallow copy del array original con el metodo .map()
-
-  let movieArrayCopy = movies.map((movie) => {
+  // part 1
+  // Queremos crear un "shallow" copy del array original :) - usemos el metodo map() === "crear un shallow copy" :)
+  const movieArrayCopy = movies.map((movie) => {
     return movie;
   });
-
-  //usemos el metodo sort() para poder ordenar los titulos
-  movieArrayCopy = movies.sort((numOne, numTwo) => {
-    return numOne > numTwo ? 1 : -1;
+  // part 2
+  // usemos el sort() para pdoer sortear :)
+  movieArrayCopy.sort((movieA, movieB) => {
+    if (movieA.year > movieB.year) return movieA.year - movieB.year;
+    if (movieA.year < movieB.year) return movieA.year - movieB.year;
+    else return movieA.title.localeCompare(movieB.title);
   });
-
-  //   return movieArrayCopy;
-  console.log(movieArrayCopy);
+  // part 3
+  // return with style
+  return movieArrayCopy;
 };
 
 console.log(orderByYear(movies));
 
 // Iteration 6: Alphabetic Order - Order by title and print the first 20 titles
 const orderAlphabetically = (movies) => {
-  const moviesTitle = movies.map((movies) => movies.title);
-  return moviesTitle.slice(0, 20).sort();
+  return movies
+    .map((movie) => movie.title) // mappeamos cada pocision del array
+    .sort() // usamos este metodo para ordenar alfabeticamente, esto automatico por eso usamos el metodo.
+    .slice(0, 20); // cortamos desde la position 0 hasta la 20 - 20 pelis
 };
+
+// const orderAlphabetically = (movies) => {
+//   const moviesTitle = movies.map((movies) => movies.title);
+//   return moviesTitle.slice(0, 20).sort();
+// };
 
 // console.log(orderAlphabetically(movies));
 
 // BONUS - Iteration 7: Time Format - Turn duration of the movies from hours to minutes
-const turnHoursToMinutes = (movies) => {
-  let newMovies = [];
-  for (let i = 0; i < movies.length; i++) {
-    let separate = movies[i].duration.split("m");
-    return separate;
-  }
+//Part 001
+const convertHours = (hourString) => {
+  let calculateHour = hourString.split("h");
+  return calculateHour[0] * 60;
 };
+// Part 002
+const convertMinutes = (minuteString) => {
+  let calculateMinutes = minuteString.split("min");
+  return Number(calculateMinutes[0]);
+};
+// Part 003
+const convertDuration = (duration) => {
+  let timePieces = duration.split(" ");
 
-// console.log(turnHoursToMinutes(movies));
+  let minutes = timePieces.reduce((sum, onePiece) => {
+    if (onePiece.includes("h")) {
+      return sum + convertHours(onePiece);
+    }
+    return sum + convertMinutes(onePiece);
+  }, 0);
+
+  return minutes;
+};
+// Part 004
+const turnHoursToMinutes = (movies) => {
+  let newCentArray = movies.map((movie) => {
+    let newMovie = {};
+    newMovie.title = movie.title;
+    newMovie.year = movie.year;
+    newMovie.director = movie.director;
+    newMovie.duration = convertDuration(movie.duration);
+    newMovie.genre = movie.genre;
+    newMovie.rate = movie.rate;
+
+    return newMovie;
+  });
+
+  return newCentArray;
+};
+console.log("Iteration 07");
+console.table(turnHoursToMinutes(movies));
+console.log("-----------------------------");
 
 // BONUS - Iteration 8: Best yearly score average - Best yearly score average
-function bestYearAvg(movies) {}
+const bestYearAvg = (movies) => {
+  if (!movies.length) return null;
+
+  let masterObject = {};
+
+  movies.forEach((movie) => {
+    if (!masterObject[movie.year]) {
+      masterObject[movie.year] = [movie];
+    } else {
+      masterObject[movie.year].push(movie);
+    }
+  });
+
+  let highest = 0;
+  let theActualYear;
+  for (let theYear in masterObject) {
+    if (scoresAverage(masterObject[theYear]) > highest) {
+      highest = scoresAverage(masterObject[theYear]);
+      theActualYear = theYear;
+    }
+  }
+  return `The best year was ${theActualYear} with an average score of ${highest}`;
+};
+console.log("Iteration 08");
+console.log(bestYearAvg(movies));
+console.log("-----------------------------");
