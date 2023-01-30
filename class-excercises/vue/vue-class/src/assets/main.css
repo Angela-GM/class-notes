@@ -15,6 +15,28 @@ a,
   transition: 0.4s;
 }
 
+p {
+  font-size: 2em;
+}
+
+/* Estilos counter */
+.counter  div {
+  display: flex;
+}
+
+.counter h2 {
+  padding: 2em 0;
+}
+.counter  div button {
+  padding: 1em 2em;
+}
+
+.counter  div p {
+  padding: 0 1em;
+}
+
+
+
 @media (hover: hover) {
   a:hover {
     background-color: hsla(160, 100%, 37%, 0.2);
