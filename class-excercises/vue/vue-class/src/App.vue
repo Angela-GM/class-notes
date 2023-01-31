@@ -1,7 +1,10 @@
 <script setup>
 import HelloWorld from './components/HelloWorld.vue'
 // import TheWelcome from './components/TheWelcome.vue'
-import MyFirstComponent from './components/0-My-FirstComponent.vue'
+// import MyFirstComponent from './components/0-My-FirstComponent.vue'
+// import TextDirective from './components/1-TextDirective.vue'
+// import BindDirective from './components/3-BindDirectiveEx.vue';
+import CondicionalDirectives from './components/4-CondicionalDirectives.vue';
 </script>
 
 <template>
@@ -15,7 +18,11 @@ import MyFirstComponent from './components/0-My-FirstComponent.vue'
 
   <main>
     <!-- <TheWelcome /> -->
-    <MyFirstComponent />
+    <!-- <MyFirstComponent />
+    <TextDirective /> -->
+    <!-- <BindDirective /> -->
+    <CondicionalDirectives />
+
   </main>
 </template>
 

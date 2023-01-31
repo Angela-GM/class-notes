@@ -8,12 +8,18 @@
     <!-- Usando datos primitivos -->
     <section>
         <div>
-            <p>Mi nombre es {{ myName }}, tengo {{ age }} años y vivo en {{ countryOfLive }}</p>
+            <p>
+                Mi nombre es {{ myName }}, tengo {{ age }} años y vivo en
+                {{ countryOfLive }}
+            </p>
         </div>
 
         <!-- Usando datos no primitivos -->
         <div>
-            <p>Mi nombre es {{ myInfo.myName }}, tengo {{ myInfo.age }} años y vivo en {{ myInfo.countryOfLive }}</p>
+            <p>
+                Mi nombre es {{ myInfo.myName }}, tengo {{ myInfo.age }} años y vivo en
+                {{ myInfo.countryOfLive }}
+            </p>
         </div>
 
         <!-- Null value -->
@@ -28,28 +34,37 @@
     <section>
         <div class="counter">
             <h2>{{ counter.tittle }}</h2>
-            <div><button @click="decreaserCounter">-</button>
+            <div>
+                <button @click="decreaserCounter">-</button>
                 <p>{{ counter.count }}</p>
                 <button @click="increaseCounter">+</button>
             </div>
-
-
         </div>
     </section>
 
     <!-- Ejercicio 1 -->
     <section>
-        <p>Mi nombre es {{ datos.name }}, tengo {{ datos.age }} años y nací el {{ datos.dob }}.</p>
-        <p>Mis hobbies son la {{ datos.hobbies[0] }}, los {{ datos.hobbies[1] }} y {{ datos.hobbies[2] }}.</p>
-        <p>Estudié primaria en {{ datos.educacion.primaria }}, secundaria en {{ datos.educacion.secundaria }} y la universidad en {{ datos.educacion.universidad }}.</p>
+        <p>
+            Mi nombre es {{ datos.name }}, tengo {{ datos.age }} años y nací el
+            {{ datos.dob }}.
+        </p>
+        <p>
+            Mis hobbies son la {{ datos.hobbies[0] }}, los {{ datos.hobbies[1] }} y
+            {{ datos.hobbies[2] }}.
+        </p>
+        <p>
+            Estudié primaria en {{ datos.educacion.primaria }}, secundaria en
+            {{ datos.educacion.secundaria }} y la universidad en
+            {{ datos.educacion.universidad }}.
+        </p>
         <p>Uno de mis grupos favoritos de musica es {{ datos.grupoFavorito }}</p>
 
-        <p>Mi pelicula favorita es {{ peliculaFav }} y la he visto como mínimo unas {{ countViews }} veces.</p>
+        <p>
+            Mi pelicula favorita es {{ peliculaFav }} y la he visto como mínimo unas
+            {{ countViews }} veces.
+        </p>
         <p>Mi comida favorita es la {{ comidaFav }}.</p>
-
-        </section>
-
-
+    </section>
 </template>
 
 <!-- JS -->
@@ -58,7 +73,7 @@
 //un metodo se llama ref() para datos primitivos
 //un metodo se llama reactive() para objetos, arrays, etc. datos no primitivos
 
-//PASOS 
+//PASOS
 //1er paso
 import { ref, reactive } from "vue";
 
@@ -74,18 +89,18 @@ const nullValue = ref(null);
 const myInfo = reactive({
     myName: "Angela",
     countryOfLive: "Tarragona",
-    age: 40
+    age: 40,
 });
 
 // EJEMPLO FUNCIONA - CONTADOR
 const counter = reactive({
     count: 0,
     tittle: "My counter",
-})
+});
 
 const increaseCounter = () => {
     counter.count++;
-}
+};
 
 const decreaserCounter = () => {
     counter.count--;
@@ -111,14 +126,11 @@ const datos = reactive({
         universidad: "UOC",
     },
     grupoFavorito: "Taylor Davis",
-})
+});
 
 const peliculaFav = ref("Mononoke Hime");
 const countViews = ref(20);
 const comidaFav = ref("Pizza");
-
-
-
 </script>
 
 <!-- CSS -->
