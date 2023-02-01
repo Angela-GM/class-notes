@@ -5,7 +5,8 @@ import HelloWorld from './components/HelloWorld.vue'
 // import TextDirective from './components/1-TextDirective.vue'
 // import BindDirective from './components/3-BindDirectiveEx.vue';
 // import CondicionalDirectives from "./components/4-CondicionalDirectives.vue";
-import IterativeDirective from './components/05-IterativeDirective.vue';
+// import IterativeDirective from './components/05-IterativeDirective.vue';
+import FormDirective from './components/06-FormDirective.vue'
 </script>
 
 <template>
@@ -23,7 +24,8 @@ import IterativeDirective from './components/05-IterativeDirective.vue';
     <TextDirective /> -->
     <!-- <BindDirective />
     <CondicionalDirectives /> -->
-    <IterativeDirective />
+    <!-- <IterativeDirective /> -->
+    <FormDirective />
 
   </main>
 </template>
