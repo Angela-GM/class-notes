@@ -11,25 +11,35 @@
 
 <!-- HTML HERE -->
 <template>
-  <!-- Ej.1 -->
-  <h1
-  v-if="showing"
-  >I'm showing up beacuse our reactive data is true!</h1>
-  <h1 v-if="!showing">I'm the option anytime our reactive data cannot be read as true</h1>
+    <!-- Ej.1 -->
 
-  <!-- Ej.2 -->
-  <p v-if="language === 'HTML'">Today we are learing {{ language }}</p>
-  <p v-else-if="language === 'CSS'">Today we are learing {{ language }}</p>
-  <p v-else-if="language === 'JS'">Today we are learing {{ language }}</p>
-  <p v-else>Today there's no class!</p>
+    <h1 v-if="showing">I'm showing up beacuse our reactive data is true!</h1>
+    <h1 v-if="!showing">
+        I'm the option anytime our reactive data cannot be read as true
+    </h1>
 
-  <!-- Ej.3 -->
-  <h1>{{ myBio.nombre }}</h1>
-  <p v-if="myBio.edad > 18">I am an adult! :)</p>
-  <p v-else>I'm still a minor :(</p>
+    <!-- Ej.2 -->
+    <p v-if="language === 'HTML'">Today we are learing {{ language }}</p>
+    <p v-else-if="language === 'CSS'">Today we are learing {{ language }}</p>
+    <p v-else-if="language === 'JS'">Today we are learing {{ language }}</p>
+    <p v-else>Today there's no class!</p>
 
-  <p v-if="!myBio.hasCodedBefore" >I am still a newbie to code but I'm learning fast</p>
-  <p v-if="myBio.hasCodedBefore">This is not my first time at the javascript and vue rodeo</p>
+    <!-- Ej.3 -->
+
+    <template v-if="show">
+        <h1>{{ myBio.nombre }}</h1>
+        <p v-if="myBio.edad >= 18">I am an adult! :)</p>
+        <p v-else>I'm still a minor :(</p>
+
+        <p v-if="myBio.hasCodedBefore">
+            I am still a newbie to code but I'm learning fast
+        </p>
+        <p v-if="!myBio.hasCodedBefore">
+            This is not my first time at the javascript and vue rodeo
+        </p>
+    </template>
+
+
 
 
 
@@ -42,18 +52,28 @@ import { ref, reactive } from "vue";
 const showing = ref(true);
 
 // Ej.2
-const language = ref("JS");//Esta variable podrá tener tres valores distintos: "HTML", "CSS" o "JS"
+const language = ref("JS"); //Esta variable podrá tener tres valores distintos: "HTML", "CSS" o "JS"
 
 // Ej.3
 const myBio = reactive({
-    nombre: 'Angela',
+    nombre: "Angela",
     edad: 40,
-    hasCodedBefore: true
+    hasCodedBefore: true,
 });
 
 const show = ref(true);
-
 </script>
 <!-- CSS HERE -->
 <style scoped>
+h1 {
+    font-weight: bold;
+    background-color: rgb(7, 106, 78);
+    color: white;
+    margin: 2rem 0;
+    padding-left: 0.5em;
+}
+
+p {
+    font-size: 1.5em;
+}
 </style>

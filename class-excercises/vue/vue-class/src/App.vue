@@ -4,7 +4,8 @@ import HelloWorld from './components/HelloWorld.vue'
 // import MyFirstComponent from './components/0-My-FirstComponent.vue'
 // import TextDirective from './components/1-TextDirective.vue'
 // import BindDirective from './components/3-BindDirectiveEx.vue';
-import CondicionalDirectives from './components/4-CondicionalDirectives.vue';
+// import CondicionalDirectives from "./components/4-CondicionalDirectives.vue";
+import IterativeDirective from './components/05-IterativeDirective.vue';
 </script>
 
 <template>
@@ -20,8 +21,9 @@ import CondicionalDirectives from './components/4-CondicionalDirectives.vue';
     <!-- <TheWelcome /> -->
     <!-- <MyFirstComponent />
     <TextDirective /> -->
-    <!-- <BindDirective /> -->
-    <CondicionalDirectives />
+    <!-- <BindDirective />
+    <CondicionalDirectives /> -->
+    <IterativeDirective />
 
   </main>
 </template>
