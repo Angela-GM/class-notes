@@ -1,16 +1,10 @@
 <script setup>
 import { RouterLink, RouterView } from 'vue-router'
-import { ref, onMounted, onUpdated, onUnmounted } from "vue";
 import HelloWorld from './components/HelloWorld.vue'
-import Button from './components/Button.vue';
-import Watches from './components/Watches.vue';
-import ParentComponent from './components/EjercicioEvents/ParentComponent.vue';
-import ChildComponent from './components/EjercicioEvents/ChildComponent.vue';
-import General from './components/EjercicioEvents/General.vue';
 </script>
 
 <template>
-  <!-- <header>
+  <header>
     <img alt="Vue logo" class="logo" src="@/assets/logo.svg" width="125" height="125" />
 
     <div class="wrapper">
@@ -19,24 +13,12 @@ import General from './components/EjercicioEvents/General.vue';
       <nav>
         <RouterLink to="/">Home</RouterLink>
         <RouterLink to="/about">About</RouterLink>
-        <RouterLink to="/comida">Comida Favorita</RouterLink>
-        <RouterLink to="/banda">Banda de Musica</RouterLink>
-        
-
       </nav>
     </div>
   </header>
 
   <RouterView />
-  <Button>Este boton es un slot</Button> -->
-
-  <!-- <Watches /> -->
-  <!-- <ParentComponent></ParentComponent> -->
-  <General></General>
-
-
 </template>
-
 
 <style scoped>
 header {
@@ -101,5 +83,3 @@ nav a:first-of-type {
   }
 }
 </style>
-
-

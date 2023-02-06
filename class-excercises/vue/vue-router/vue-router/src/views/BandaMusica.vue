@@ -5,6 +5,7 @@ const changeShow = () => {
     showImage.value = !showImage.value;
     console.log(showImage.value);
 };
+const TayrloDavisImage = ref("https://i1.sndcdn.com/artworks-000101775728-xdcc3x-t500x500.jpg");
 
 
 
@@ -22,7 +23,7 @@ const changeShow = () => {
     </p>
 
      <input type="button" value="Click" @click="changeShow">
-    <img v-if="showImage" src="https://i1.sndcdn.com/artworks-000101775728-xdcc3x-t500x500.jpg" alt="foto de Taylor Davis">
+    <img v-if="showImage" :src="TayrloDavisImage" alt="foto de Taylor Davis">
 
    
   </section>

@@ -3,23 +3,22 @@
   <!-- Formulario -->
   <div class="formulario">
     <form @submit.prevent="handleSubmit">
+        <!-- Name -->
       <div id="applicantName">
         <label for="name">Enter name:</label>
-        <input
-          type="text"
-          id="name"
-          autocomplete="off"
-          v-model="formValues.name"
-        />
+        <input type="text" id="name" autocomplete="off" v-model="formValues.name" />
       </div>
+      <!-- Age -->
       <div id="applicantAge">
         <label for="age">Enter age:</label>
         <input type="number" id="age" min="0" v-model="formValues.age" />
       </div>
+      <!-- Date of Birth -->
       <div id="applicantDob">
         <label for="dob">Select your date of birth</label>
         <input type="date" id="dob" min="0" v-model="formValues.dateOfBirth" />
       </div>
+      <!-- Button -->
       <div id="submit-form-button">
         <input type="submit" value="Submit Form Data" />
       </div>
@@ -30,8 +29,6 @@
   <div>
     <pre>{{ JSON.stringify(formValues, null, 1) }}</pre>
   </div> -->
-
-  
 </template>
 <!-- JS HERE -->
 <script setup>
@@ -52,10 +49,10 @@ const formValues = reactive({
 // Una vez le demos a submit deberíamos encargarnos de imprimir en una alerta un texto con el nombre que le hayáis inputado, un texto con la edad y un texto con vuestra date de birth.
 
 const handleSubmit = () => {
-    console.log(formValues);
-    alert(`Tu nombre es ${formValues.name}, tienes ${formValues.age} años y naciste el ${formValues.dateOfBirth}.
+  console.log(formValues);
+  alert(`Tu nombre es ${formValues.name}, tienes ${formValues.age} años y naciste el ${formValues.dateOfBirth}.
 
-    `)
+    `);
 };
 
 // approach 1 - guardan cada dato en su variable propia name, age y dob
@@ -70,5 +67,8 @@ pre {
 div {
   display: flex;
   flex-direction: column;
+}
+input {
+    padding: 0.7em 0.1em;
 }
 </style>

@@ -6,6 +6,8 @@ const changeShow = () => {
     console.log(showImage.value);
 };
 
+const imagePizza = ref("https://upload.wikimedia.org/wikipedia/commons/f/f6/Eataly_Las_Vegas_-_Feb_2019_-_Sarah_Stierch_12.jpg");
+
 </script>
 
 <template>
@@ -27,7 +29,7 @@ const changeShow = () => {
       o Chicago.
     </p>
     <input type="button" value="Click" @mouseenter="changeShow">
-    <img v-if="showImage" class="pizza-img" src="https://upload.wikimedia.org/wikipedia/commons/f/f6/Eataly_Las_Vegas_-_Feb_2019_-_Sarah_Stierch_12.jpg" alt="foto de pizza">
+    <img v-if="showImage" class="pizza-img" :src="imagePizza" alt="foto de pizza">
   </section>
 </template>
 

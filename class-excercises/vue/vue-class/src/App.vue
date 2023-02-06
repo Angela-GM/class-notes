@@ -1,5 +1,5 @@
 <script setup>
-import HelloWorld from './components/HelloWorld.vue'
+import PropComponentClass from './components/PropComponentClass.vue'
 // import TheWelcome from './components/TheWelcome.vue'
 // import MyFirstComponent from './components/0-My-FirstComponent.vue'
 // import TextDirective from './components/1-TextDirective.vue'
@@ -14,7 +14,7 @@ import FormDirective from './components/06-FormDirective.vue'
     <!-- <img alt="Vue logo" class="logo" src="./assets/logo.svg" width="125" height="125" /> -->
 
     <div class="wrapper">
-      <HelloWorld msg="Vue Class - my first component!" />
+      <PropComponentClass msg="Vue Class - my first component!" />
     </div>
   </header>
 
@@ -25,7 +25,7 @@ import FormDirective from './components/06-FormDirective.vue'
     <!-- <BindDirective />
     <CondicionalDirectives /> -->
     <!-- <IterativeDirective /> -->
-    <FormDirective />
+    <!-- <FormDirective /> -->
 
   </main>
 </template>
