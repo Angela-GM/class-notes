@@ -1,23 +1,24 @@
 <template>
   <div className="tweet">
     <img
-      src="src"
+      src="https://i.imgur.com/9yw1Fyw.jpg"
       className="profile"
-      alt="alt"
+      alt="profile"
     />
 
     <div className="body">
       <div className="top">
         <span className="user">
-          <span className="name">{{name}}</span>
-          <span className="handle">{{handle}}</span>
+          <span className="name">Ironhack</span>
+          <span className="handle">@ironhack</span>
         </span>
 
-        <span className="timestamp">{{timestamp}}</span>
+        <span className="timestamp">Nov 30, 2020</span>
       </div>
 
       <p className="message">
-        {{message}}
+        On December 7th, we will be hosting a #webinar that will introduce you
+        to #SQL! Are you ready? 🚀
       </p>
 
       <div className="actions">
@@ -32,38 +33,6 @@
     <i class="fas fa-ellipsis-h"></i>
   </div>
 </template>
-
-<script setup>
-import { ref, reactive } from "vue";
-defineProps({
-  message: {
-    type: String,
-  },
-  timestamp: {
-    type: String,
-  },
-  handle: {
-    type: String,
-  },
-  name: {
-    type: String,
-  },
-  src: {
-    type: String,   
-  },
-  alt: {
-    type: String,
-  }
-
-
-
-});
-
-
-
-
-</script>
-
 
 <style scoped>
 a {
