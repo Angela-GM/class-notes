@@ -6,7 +6,9 @@ import PropComponentClass from './components/PropComponentClass.vue'
 // import BindDirective from './components/3-BindDirectiveEx.vue';
 // import CondicionalDirectives from "./components/4-CondicionalDirectives.vue";
 // import IterativeDirective from './components/05-IterativeDirective.vue';
-import FormDirective from './components/06-FormDirective.vue'
+// import FormDirective from './components/06-FormDirective.vue'
+import Ejercicio01Component from './components/Ejercicio01Component.vue';
+import Ejercicio02Component from './components/Ejercicio02Component.vue';
 </script>
 
 <template>
@@ -14,7 +16,10 @@ import FormDirective from './components/06-FormDirective.vue'
     <!-- <img alt="Vue logo" class="logo" src="./assets/logo.svg" width="125" height="125" /> -->
 
     <div class="wrapper">
-      <PropComponentClass msg="Vue Class - my first component!" />
+      <!-- <PropComponentClass msg="Vue Class - my first component!" /> -->
+      <Ejercicio01Component />
+      <Ejercicio02Component />
+
     </div>
   </header>
 

@@ -5,7 +5,7 @@ export const useSongsStore = defineStore("songs", () => {
   //variable que guarda el array de canciones
   let mySongs = reactive([]);
 
-  //funcion que inserta el valor del input dentro del array de mySongs
+  //variable par guardar el valor del input
   let inputValue = ref("");
 
   //funcion que inserta el valor del input dentro del array de mySongs
