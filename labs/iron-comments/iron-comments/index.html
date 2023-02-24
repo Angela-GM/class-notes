@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Iron Comments</title>
+
+    <link rel="stylesheet" type="text/css" href="./styles/style.css" />
+  </head>
+  <body>
+    <form id="form-container">
+      <!-- Estructura Inicial - usar como ref -->
+      <!-- <div>
+        <label for=""></label>
+        <input type="text" />
+      </div> -->
+
+      <!-- Name Input -->
+      <div>
+        <label for="name">Name:</label>
+        <br />
+        <input type="text" id="name" name="name" />
+      </div>
+
+      <!-- Email Input -->
+      <div>
+        <label for="email">Email:</label>
+        <br />
+        <input type="email" id="email" name="email" />
+      </div>
+
+      <!-- Comment Input -->
+      <div>
+        <label for="comment">Comment:</label>
+        <br />
+        <textarea name="comment" id="comment" cols="30" rows="10"></textarea>
+      </div>
+
+      <!-- Comment Input -->
+      <div>
+        <label id="updates" for="updates">Receive email updates:</label>
+
+        <input type="checkbox" name="updates" id="updates" />
+      </div>
+      <!-- Button/Submit Input -->
+      <input id="submit" type="button" value="Submit" />
+    </form>
+  </body>
+</html>
